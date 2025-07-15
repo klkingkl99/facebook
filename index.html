@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Redirect to WhatsApp</title>
+  <script>
+    window.onload = function() {
+      const number = "601124047314"; // 已加入国家码
+      const messages = [
+        "Hi admin, saya dari Facebook. Nak tanya promosi",
+        "Nak mega id yang ong² sikit boleh",
+        "Hi boss, saya nak mula tapi tak sure macam mana",
+        "Macam mana nak main sini ya",
+        "Saya minat dengan promosi u boleh share"
+      ];
+      const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+      const link = `https://wa.me/${number}?text=${encodeURIComponent(randomMsg)}`;
+      window.location.href = link; // ✅ 自动跳转
+    };
+  </script>
+</head>
+<body>
+  <p>Sedang alihkan ke WhatsApp...</p>
+</body>
+</html>
